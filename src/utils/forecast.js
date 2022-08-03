@@ -12,7 +12,7 @@ const forecast = (latitude, longitude, callback) => {
       console.log(body);
       callback(
         undefined,
-        `${body.weather[0].description}. It is currently ${body.main.temp}, could drop up to ${body.main.temp_min} and rise as high as ${body.main.temp_max}.`
+        `${body.weather[0].description}. It is currently ${body.main.temp}. The temperature low for today is ${body.main.temp_min} and high is ${body.main.temp_max}.`
       );
     }
   });
