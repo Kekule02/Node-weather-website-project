@@ -9,9 +9,10 @@ const forecast = (latitude, longitude, callback) => {
     } else if (body.message) {
       callback("Unable to find location!");
     } else {
+      console.log(body);
       callback(
         undefined,
-        `${body.weather[0].description}. It is currently ${body.main.temp} and could rise up to ${body.main.temp_max}.`
+        `${body.weather[0].description}. It is currently ${body.main.temp}, could drop up to ${body.main.temp_min} and rise as high as ${body.main.temp_max}.`
       );
     }
   });
